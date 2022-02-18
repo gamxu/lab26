@@ -1,8 +1,20 @@
 #include<iostream>
+#include<string>
+#include<set>
 
 using namespace std;
 
-//Write function count() here.
+int count(int d[],int N){
+	int count=0;
+	set<int> mySet;
+	for(int i=0;i<N;i++){
+		mySet.insert(d[i]);
+	}
+	set<int>::iterator k;
+	for(k = mySet.begin(); k != mySet.end();k++) count++;
+
+	return count;
+}
 
 int main(){	
 	int data[] = {1,2,4,5,4,8,2,1,2,4,6,1,4,4,4,2,1,0,12}; 
